@@ -1,11 +1,11 @@
-let user = document.querySelectorAll('input')
-let submit = document.querySelector('input#submit')
+const user = document.querySelectorAll('input')
+const submit = document.querySelector('input#submit')
 let computer = document.querySelector('div#result')
 
 const store_computer = ['pedra', 'papel', 'tesoura']
 
-let img = document.querySelector('img#computer')
-let h1 = document.querySelector('h1#result')
+const img = document.querySelector('img#computer')
+const h1 = document.querySelector('h1#result')
 
 function stone_possibilities(random) {
     if (user[0].checked && store_computer[random] == 'pedra') {
