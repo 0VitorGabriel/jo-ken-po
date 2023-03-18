@@ -13,7 +13,7 @@ main {
     top: 50%;
     left: 50%;
 
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, 10%);
 
     background-color: #ffffff;
     border-radius: 10px;
