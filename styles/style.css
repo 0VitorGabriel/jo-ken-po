@@ -2,8 +2,11 @@
 
 body {
     position: relative;
-    background: url(../imgs/stacked-peaks-haikei.png) center center no-repeat fixed;
+    background-image: url(../imgs/fundo.png);
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 main {
