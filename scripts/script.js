@@ -4,33 +4,41 @@ let computer = document.querySelector('div#result')
 
 const store_computer = ['pedra', 'papel', 'tesoura']
 
+let img = document.querySelector('img#computer')
+
 function stone_possibilities(random) {
     if (user[0].checked && store_computer[random] == 'pedra') {
-        return alert(`${store_computer[random]}: empate`)
+        return img.src = '../imgs/pedra.png'
     } else if (user[0].checked && store_computer[random] == 'papel') {
-        return alert(`${store_computer[random]}: perdeu`)
+        return img.src = '../imgs/papel.png'
     } else if (user[0].checked && store_computer[random] == 'tesoura') {
-        return alert(`${store_computer[random]}: ganhou`)
+        return img.src = '../imgs/tesoura.png'
     }
 }
 
 function paper_possibilities(random) {
     if (user[1].checked && store_computer[random] == 'papel') {
-        return alert(`${store_computer[random]}: empate`)
+
+        return img.src = '../imgs/papel.png'
     } else if (user[1].checked && store_computer[random] == 'tesoura') {
-        return alert(`${store_computer[random]}: perdeu`)
+
+        return img.src = '../imgs/tesoura.png'
     } else if (user[1].checked && store_computer[random] == 'pedra') {
-        return alert(`${store_computer[random]}: ganhou`)
+
+        return img.src = '../imgs/pedra.png'
     }
 }
 
 function scissors_possibilities(random) {
     if (user[2].checked && store_computer[random] == 'tesoura') {
-        return alert(`${store_computer[random]}: empate`)
+
+        return img.src = '../imgs/tesoura.png'
     } else if (user[2].checked && store_computer[random] == 'pedra') {
-        return alert(`${store_computer[random]}: perdeu`)
+
+        return img.src = '../imgs/pedra.png'
     } else if (user[2].checked && store_computer[random] == 'papel') {
-        return alert(`${store_computer[random]}: ganhou`)
+
+        return img.src = '../imgs/papel.png'
     }
 }
 
