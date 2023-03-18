@@ -1,5 +1,41 @@
 @charset "UTF-8";
 
-* {
+body {
+    position: relative;
+    background-color: #00F5EA;
+}
+
+main {
     font-family: Arial, Helvetica, sans-serif;
+    
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, 50%);
+
+    background-color: #ffffff;
+    max-width: 700px;
+    max-height: 700px;
+    border-radius: 10px;
+}
+
+img {
+    padding-top: 10px;
+    display: block;
+    margin: auto;
+}
+
+.container {
+    text-align: center;
+    padding: 10px;
+}
+
+input {
+    margin-right: 6px;
+}
+
+#submit {
+    margin-left: 10px;
 }
