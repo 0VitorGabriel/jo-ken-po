@@ -5,40 +5,43 @@ let computer = document.querySelector('div#result')
 const store_computer = ['pedra', 'papel', 'tesoura']
 
 let img = document.querySelector('img#computer')
+let h1 = document.querySelector('h1#result')
 
 function stone_possibilities(random) {
     if (user[0].checked && store_computer[random] == 'pedra') {
-        return img.src = '../imgs/pedra.png'
+
+        return img.src = '../imgs/pedra.png', h1.innerHTML = 'empate'
     } else if (user[0].checked && store_computer[random] == 'papel') {
-        return img.src = '../imgs/papel.png'
+        
+        return img.src = '../imgs/papel.png', h1.innerHTML = 'perdeu!'
     } else if (user[0].checked && store_computer[random] == 'tesoura') {
-        return img.src = '../imgs/tesoura.png'
+        return img.src = '../imgs/tesoura.png', h1.innerHTML = 'ganhou!'
     }
 }
 
 function paper_possibilities(random) {
     if (user[1].checked && store_computer[random] == 'papel') {
 
-        return img.src = '../imgs/papel.png'
+        return img.src = '../imgs/papel.png', h1.innerHTML = 'empate'
     } else if (user[1].checked && store_computer[random] == 'tesoura') {
 
-        return img.src = '../imgs/tesoura.png'
+        return img.src = '../imgs/tesoura.png', h1.innerHTML = 'perdeu!'
     } else if (user[1].checked && store_computer[random] == 'pedra') {
 
-        return img.src = '../imgs/pedra.png'
+        return img.src = '../imgs/pedra.png', h1.innerHTML = 'ganhou!'
     }
 }
 
 function scissors_possibilities(random) {
     if (user[2].checked && store_computer[random] == 'tesoura') {
 
-        return img.src = '../imgs/tesoura.png'
+        return img.src = '../imgs/tesoura.png', h1.innerHTML = 'empate'
     } else if (user[2].checked && store_computer[random] == 'pedra') {
 
-        return img.src = '../imgs/pedra.png'
+        return img.src = '../imgs/pedra.png', h1.innerHTML = 'perdeu!'
     } else if (user[2].checked && store_computer[random] == 'papel') {
 
-        return img.src = '../imgs/papel.png'
+        return img.src = '../imgs/papel.png', h1.innerHTML = 'ganhou!'
     }
 }
 
