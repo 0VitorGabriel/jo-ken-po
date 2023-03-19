@@ -5,12 +5,12 @@ let computer = document.querySelector('div#result')
 
 const store_computer = ['pedra', 'papel', 'tesoura']
 
-const img = document.querySelector('img#computer')
-const h1 = document.querySelector('h1#result')
+let img = document.querySelector('img#computer')
+let h1 = document.querySelector('h1#result')
 
-const area_round = document.querySelector('p#total_round')
-const area_defeat = document.querySelector('p#defeats')
-const area_victory = document.querySelector('p#victory')
+let area_round = document.querySelector('p#total_round')
+let area_defeat = document.querySelector('p#defeats')
+let area_victory = document.querySelector('p#victory')
 
 let round = 0
 let defeat = 0
@@ -86,7 +86,11 @@ submit.addEventListener('click', function finaly() {
         Math.random() * store_computer.length
     )
     
-    stone_possibilities(random_store_computer)
-    paper_possibilities(random_store_computer)
-    scissors_possibilities(random_store_computer)
+    if (user[0].checked) {
+        stone_possibilities(random_store_computer)
+    } else if (user[1].checked) {
+        paper_possibilities(random_store_computer)
+    } else if (user[2].checked) {
+        scissors_possibilities(random_store_computer)
+    }
 }) 
