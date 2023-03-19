@@ -8,6 +8,7 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    /*não usei shorthand por que não funcionava em dispositivos móveis!*/
 }
 
 main {
@@ -18,7 +19,7 @@ main {
     top: 50%;
     left: 50%;
 
-    transform: translate(-50%, 1.6%);
+    transform: translate(-50%, 7%);
 
     max-width: infinite;
     max-height: infinite;
@@ -51,10 +52,15 @@ input {
 
 h2 {
     text-align: center;
+    margin-bottom: 0px;
 }
 
 h1 {
     text-align: center;
+}
+
+#result {
+    margin-top: 0px;
 }
 
 .points {
