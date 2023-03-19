@@ -8,11 +8,11 @@ const store_computer = ['pedra', 'papel', 'tesoura']
 const img = document.querySelector('img#computer')
 const h1 = document.querySelector('h1#result')
 
-const area_point = document.querySelector('p#total_point')
+const area_round = document.querySelector('p#total_round')
 const area_defeat = document.querySelector('p#defeats')
 const area_victory = document.querySelector('p#victory')
 
-let point = 0
+let round = 0
 let defeat = 0
 let victory = 0
 
@@ -21,15 +21,15 @@ function stone_possibilities(random) {
 
         return img.src = '../imgs/pedra.png', 
         h1.innerHTML = 'empate', 
-        point += 0, area_point.innerHTML = `pontos: ${point}`
+        round += 1, area_round.innerHTML = `total: ${round}`
     } else if (user[0].checked && store_computer[random] == 'papel') {
         
-        return img.src = '../imgs/papel.png', h1.innerHTML = 'perdeu!', point -= 1, 
-        area_point.innerHTML = `pontos: ${point}`, 
+        return img.src = '../imgs/papel.png', h1.innerHTML = 'perdeu!', round += 1, 
+        area_round.innerHTML = `total: ${round}`, 
         defeat += 1, area_defeat.innerHTML = `derrotas: ${defeat}`
     } else if (user[0].checked && store_computer[random] == 'tesoura') {
-        return img.src = '../imgs/tesoura.png', h1.innerHTML = 'ganhou!', point += 1, 
-        area_point.innerHTML = `pontos: ${point}`, 
+        return img.src = '../imgs/tesoura.png', h1.innerHTML = 'ganhou!', round += 1, 
+        area_round.innerHTML = `total: ${round}`, 
         victory += 1, area_victory.innerHTML = `vitórias: ${victory}`
     }
 }
@@ -39,17 +39,17 @@ function paper_possibilities(random) {
 
         return img.src = '../imgs/papel.png',
         h1.innerHTML = 'empate', 
-        point += 0, area_point.innerHTML = `pontos: ${point}`
+        round += 1, area_round.innerHTML = `total: ${round}`
     } else if (user[1].checked && store_computer[random] == 'tesoura') {
 
         return img.src = '../imgs/tesoura.png', 
         h1.innerHTML = 'perdeu!', 
-        point -= 1, area_point.innerHTML = `pontos: ${point}`, 
+        round += 1, area_round.innerHTML = `total: ${round}`, 
         defeat += 1, area_defeat.innerHTML = `derrotas: ${defeat}`
     } else if (user[1].checked && store_computer[random] == 'pedra') {
 
         return img.src = '../imgs/pedra.png', h1.innerHTML = 'ganhou!', 
-        point += 1, area_point.innerHTML = `pontos: ${point}`, 
+        round += 1, area_round.innerHTML = `total: ${round}`, 
         victory += 1, area_victory.innerHTML = `vitórias: ${victory}`
     }
 }
@@ -58,17 +58,17 @@ function scissors_possibilities(random) {
     if (user[2].checked && store_computer[random] == 'tesoura') {
 
         return img.src = '../imgs/tesoura.png', h1.innerHTML = 'empate', 
-        point += 0, area_point.innerHTML = `pontos: ${point}`
+        round += 1, area_round.innerHTML = `total: ${round}`
 
     } else if (user[2].checked && store_computer[random] == 'pedra') {
 
-        return img.src = '../imgs/pedra.png', h1.innerHTML = 'perdeu!', point -= 1, 
-        area_point.innerHTML = `pontos: ${point}`, 
+        return img.src = '../imgs/pedra.png', h1.innerHTML = 'perdeu!', round += 1, 
+        area_round.innerHTML = `total: ${round}`, 
         defeat += 1, area_defeat.innerHTML = `derrotas: ${defeat}`
     } else if (user[2].checked && store_computer[random] == 'papel') {
 
         return img.src = '../imgs/papel.png', h1.innerHTML = 'ganhou!', 
-        point += 1, area_point.innerHTML = `pontos: ${point}`, 
+        round += 1, area_round.innerHTML = `total: ${round}`, 
         victory += 1, area_victory.innerHTML = `vitórias: ${victory}`
     }
 }
