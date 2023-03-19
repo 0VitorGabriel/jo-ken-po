@@ -1,11 +1,3 @@
-const user = document.querySelectorAll('input')
-const submit = document.querySelector('input#submit')
-
-let computer = document.querySelector('div#result')
-
-const store_computer = ['pedra', 'papel', 'tesoura']
-
-let img = document.querySelector('img#computer')
 let h1 = document.querySelector('h1#result')
 
 let area_round = document.querySelector('p#total_round')
@@ -32,6 +24,10 @@ function case_lose() {
     area_round.innerHTML = `total: ${round}`, 
     victory += 1, area_victory.innerHTML = `vitórias: ${victory}`
 }
+
+let img = document.querySelector('img#computer')
+const user = document.querySelectorAll('input')
+const store_computer = ['pedra', 'papel', 'tesoura']
 
 function stone_possibilities(random) {
     if (user[0].checked && store_computer[random] == 'pedra') {
@@ -79,6 +75,8 @@ function scissors_possibilities(random) {
 
     }
 }
+
+const submit = document.querySelector('input#submit')
 
 submit.addEventListener('click', function finaly() {
 
