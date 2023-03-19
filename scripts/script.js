@@ -16,60 +16,67 @@ let round = 0
 let defeat = 0
 let victory = 0
 
+function tie_case() {
+    return h1.innerHTML = 'empate', 
+    round += 1, area_round.innerHTML = `total: ${round}`
+}
+
+function win_case() {
+    return h1.innerHTML = 'perdeu!', round += 1, 
+    area_round.innerHTML = `total: ${round}`, 
+    defeat += 1, area_defeat.innerHTML = `derrotas: ${defeat}`
+}
+
+function case_lose() {
+    return h1.innerHTML = 'ganhou!', round += 1, 
+    area_round.innerHTML = `total: ${round}`, 
+    victory += 1, area_victory.innerHTML = `vitórias: ${victory}`
+}
+
 function stone_possibilities(random) {
     if (user[0].checked && store_computer[random] == 'pedra') {
 
-        return img.src = '../imgs/pedra.png', 
-        h1.innerHTML = 'empate', 
-        round += 1, area_round.innerHTML = `total: ${round}`
+        return img.src = '../imgs/pedra.png', tie_case()
+
     } else if (user[0].checked && store_computer[random] == 'papel') {
         
-        return img.src = '../imgs/papel.png', h1.innerHTML = 'perdeu!', round += 1, 
-        area_round.innerHTML = `total: ${round}`, 
-        defeat += 1, area_defeat.innerHTML = `derrotas: ${defeat}`
+        return img.src = '../imgs/papel.png', win_case()
+
     } else if (user[0].checked && store_computer[random] == 'tesoura') {
-        return img.src = '../imgs/tesoura.png', h1.innerHTML = 'ganhou!', round += 1, 
-        area_round.innerHTML = `total: ${round}`, 
-        victory += 1, area_victory.innerHTML = `vitórias: ${victory}`
+        return img.src = '../imgs/tesoura.png', case_lose()
+
     }
 }
 
 function paper_possibilities(random) {
     if (user[1].checked && store_computer[random] == 'papel') {
 
-        return img.src = '../imgs/papel.png',
-        h1.innerHTML = 'empate', 
-        round += 1, area_round.innerHTML = `total: ${round}`
+        return img.src = '../imgs/papel.png', tie_case()
+
     } else if (user[1].checked && store_computer[random] == 'tesoura') {
 
-        return img.src = '../imgs/tesoura.png', 
-        h1.innerHTML = 'perdeu!', 
-        round += 1, area_round.innerHTML = `total: ${round}`, 
-        defeat += 1, area_defeat.innerHTML = `derrotas: ${defeat}`
+        return img.src = '../imgs/tesoura.png', case_lose()
+
     } else if (user[1].checked && store_computer[random] == 'pedra') {
 
-        return img.src = '../imgs/pedra.png', h1.innerHTML = 'ganhou!', 
-        round += 1, area_round.innerHTML = `total: ${round}`, 
-        victory += 1, area_victory.innerHTML = `vitórias: ${victory}`
+        return img.src = '../imgs/pedra.png', win_case()
+
     }
 }
 
 function scissors_possibilities(random) {
     if (user[2].checked && store_computer[random] == 'tesoura') {
 
-        return img.src = '../imgs/tesoura.png', h1.innerHTML = 'empate', 
-        round += 1, area_round.innerHTML = `total: ${round}`
+        return img.src = '../imgs/tesoura.png', tie_case()
 
     } else if (user[2].checked && store_computer[random] == 'pedra') {
 
-        return img.src = '../imgs/pedra.png', h1.innerHTML = 'perdeu!', round += 1, 
-        area_round.innerHTML = `total: ${round}`, 
-        defeat += 1, area_defeat.innerHTML = `derrotas: ${defeat}`
+        return img.src = '../imgs/pedra.png', case_lose()
+
     } else if (user[2].checked && store_computer[random] == 'papel') {
 
-        return img.src = '../imgs/papel.png', h1.innerHTML = 'ganhou!', 
-        round += 1, area_round.innerHTML = `total: ${round}`, 
-        victory += 1, area_victory.innerHTML = `vitórias: ${victory}`
+        return img.src = '../imgs/papel.png', win_case()
+
     }
 }
 
