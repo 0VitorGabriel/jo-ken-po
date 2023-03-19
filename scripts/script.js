@@ -9,7 +9,7 @@ const img = document.querySelector('img#computer')
 const h1 = document.querySelector('h1#result')
 
 let point = 0
-let area_point = document.querySelector('p#point')
+const area_point = document.querySelector('p#point')
 
 function stone_possibilities(random) {
     if (user[0].checked && store_computer[random] == 'pedra') {
