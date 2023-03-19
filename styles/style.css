@@ -2,7 +2,7 @@
 
 body {
     position: relative;
-    
+
     background-image: url(../imgs/fundo.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,7 +33,6 @@ img#img_top {
 }
 
 img#computer {
-    padding: 0px 0px 10px 0px;
     display: block;
     margin: auto;
 }
