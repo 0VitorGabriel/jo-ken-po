@@ -2,6 +2,7 @@
 
 body {
     position: relative;
+    
     background-image: url(../imgs/fundo.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,7 +18,7 @@ main {
     top: 50%;
     left: 50%;
 
-    transform: translate(-50%, 3%);
+    transform: translate(-50%, 1.6%);
 
     max-width: infinite;
     max-height: infinite;
@@ -39,7 +40,6 @@ img#computer {
 
 .container {
     text-align: center;
-    padding: 10px;
 }
 
 input {
@@ -56,4 +56,15 @@ h2 {
 
 h1 {
     text-align: center;
+}
+
+.points {
+    margin: 5px;
+}
+
+.points > p {
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: large;
 }
