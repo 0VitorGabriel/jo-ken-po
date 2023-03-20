@@ -32,14 +32,14 @@ const store_computer = ['pedra', 'papel', 'tesoura']
 function stone_possibilities(random) {
     if (user[0].checked && store_computer[random] == 'pedra') {
 
-        return img.src = '../imgs/pedra.png', tie_case()
+        return img.setAttribute('src','../imgs/pedra.png'), tie_case()
 
     } else if (user[0].checked && store_computer[random] == 'papel') {
         
-        return img.src = '../imgs/papel.png', win_case()
+        return img.setAttribute('src','../imgs/papel.png'), win_case()
 
     } else if (user[0].checked && store_computer[random] == 'tesoura') {
-        return img.src = '../imgs/tesoura.png', case_lose()
+        return img.setAttribute('src','../imgs/tesoura.png'), case_lose()
 
     }
 }
@@ -47,15 +47,15 @@ function stone_possibilities(random) {
 function paper_possibilities(random) {
     if (user[1].checked && store_computer[random] == 'papel') {
 
-        return img.src = '../imgs/papel.png', tie_case()
+        return img.setAttribute('src','../imgs/papel.png'), tie_case()
 
     } else if (user[1].checked && store_computer[random] == 'tesoura') {
 
-        return img.src = '../imgs/tesoura.png', case_lose()
+        return img.setAttribute('src','../imgs/tesoura.png'), case_lose()
 
     } else if (user[1].checked && store_computer[random] == 'pedra') {
 
-        return img.src = '../imgs/pedra.png', win_case()
+        return img.setAttribute('src','../imgs/pedra.png'), win_case()
 
     }
 }
@@ -63,15 +63,15 @@ function paper_possibilities(random) {
 function scissors_possibilities(random) {
     if (user[2].checked && store_computer[random] == 'tesoura') {
 
-        return img.src = '../imgs/tesoura.png', tie_case()
+        return img.setAttribute('src','../imgs/tesoura.png'), tie_case()
 
     } else if (user[2].checked && store_computer[random] == 'pedra') {
 
-        return img.src = '../imgs/pedra.png', case_lose()
+        return img.setAttribute('src','../imgs/pedra.png'), case_lose()
 
     } else if (user[2].checked && store_computer[random] == 'papel') {
 
-        return img.src = '../imgs/papel.png', win_case()
+        return img.setAttribute('src','../imgs/papel.png'), win_case()
 
     }
 }
