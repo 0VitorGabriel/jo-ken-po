@@ -13,16 +13,16 @@ function tie_case() {
     round += 1, area_round.innerHTML = `total: ${round}`
 }
 
-function win_case() {
-    return h1.innerHTML = 'ganhou!', round += 1, 
-    area_round.innerHTML = `total: ${round}`, 
-    victory += 1, area_victory.innerHTML = `vitórias: ${victory}`
-}
-
 function case_lose() {
     return h1.innerHTML = 'perdeu!', round += 1, 
     area_round.innerHTML = `total: ${round}`, 
     defeat += 1, area_defeat.innerHTML = `derrotas: ${defeat}`
+}
+
+function win_case() {
+    return h1.innerHTML = 'ganhou!', round += 1, 
+    area_round.innerHTML = `total: ${round}`, 
+    victory += 1, area_victory.innerHTML = `vitórias: ${victory}`
 }
 
 let img = document.querySelector('img#computer')
