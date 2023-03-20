@@ -26,7 +26,6 @@ function case_lose() {
 }
 
 let img = document.querySelector('img#computer')
-const user = document.querySelectorAll('input')
 const store_computer = ['pedra', 'papel', 'tesoura']
 
 function stone_possibilities(random) {
@@ -76,6 +75,7 @@ function scissors_possibilities(random) {
     }
 }
 
+const user = document.querySelectorAll('input')
 const submit = document.querySelector('input#submit')
 
 submit.addEventListener('click', function finaly() {
