@@ -76,8 +76,6 @@ function scissors_possibilities(random) {
 }
 
 const user = document.querySelectorAll('input')
-const play = document.querySelector('input#submit')
-const restart = document.querySelector('input#restart')
 
 function check_pressed_button(random) {
     if (user[0].checked) {
@@ -89,6 +87,8 @@ function check_pressed_button(random) {
     }
 }
 
+const play = document.querySelector('input#submit')
+
 play.addEventListener('click', () => {
 
     let random_store_computer = Math.floor(
@@ -97,3 +97,21 @@ play.addEventListener('click', () => {
     
     check_pressed_button(random_store_computer)
 }) 
+
+const restart = document.querySelector('input#restart')
+
+restart.addEventListener('click', function restart() {
+
+    img.setAttribute('src','../imgs/computador.jpg')
+
+    area_round.innerHTML = 'total: '
+    round = 0
+    
+    area_defeat.innerHTML = 'derrotas: '
+    defeat = 0
+
+    area_victory.innerHTML = 'vitórias: '
+    victory = 0
+
+    h1.innerHTML = ''
+})
