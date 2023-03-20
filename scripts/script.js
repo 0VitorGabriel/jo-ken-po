@@ -78,17 +78,21 @@ function scissors_possibilities(random) {
 const user = document.querySelectorAll('input')
 const submit = document.querySelector('input#submit')
 
+function check_pressed_button(random) {
+    if (user[0].checked) {
+        stone_possibilities(random)
+    } else if (user[1].checked) {
+        paper_possibilities(random)
+    } else if (user[2].checked) {
+        scissors_possibilities(random)
+    }
+}
+
 submit.addEventListener('click', function play() {
 
     let random_store_computer = Math.floor(
         Math.random() * store_computer.length
     )
     
-    if (user[0].checked) {
-        stone_possibilities(random_store_computer)
-    } else if (user[1].checked) {
-        paper_possibilities(random_store_computer)
-    } else if (user[2].checked) {
-        scissors_possibilities(random_store_computer)
-    }
+    check_pressed_button(random_store_computer)
 }) 
