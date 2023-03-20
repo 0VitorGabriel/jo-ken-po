@@ -3,6 +3,7 @@
 body {
     position: relative;
 
+    background-color: #000000;
     background-image: url(../imgs/fundo.png);
     background-repeat: no-repeat;
     background-size: cover;
