@@ -76,7 +76,7 @@ function scissors_possibilities(random) {
 }
 
 const user = document.querySelectorAll('input')
-const submit = document.querySelector('input#submit')
+const play = document.querySelector('input#submit')
 
 function check_pressed_button(random) {
     if (user[0].checked) {
@@ -88,7 +88,7 @@ function check_pressed_button(random) {
     }
 }
 
-submit.addEventListener('click', function play() {
+play.addEventListener('click', () => {
 
     let random_store_computer = Math.floor(
         Math.random() * store_computer.length
