@@ -77,6 +77,7 @@ function scissors_possibilities(random) {
 
 const user = document.querySelectorAll('input')
 const play = document.querySelector('input#submit')
+const restart = document.querySelector('input#restart')
 
 function check_pressed_button(random) {
     if (user[0].checked) {
