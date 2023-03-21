@@ -89,7 +89,7 @@ function check_pressed_button(random) {
 
 const play = document.querySelector('input#submit')
 
-play.addEventListener('click', () => {
+play.addEventListener('click', function randomize_and_start() {
 
     let random_store_computer = Math.floor(
         Math.random() * store_computer.length
