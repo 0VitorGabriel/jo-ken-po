@@ -9,20 +9,25 @@ let defeat = 0
 let victory = 0
 
 function tie_case() {
-    return h1.innerHTML = 'empate', 
-    round += 1, area_round.innerHTML = `total: ${round}`
+    h1.innerHTML = 'empate' 
+    round += 1
+    area_round.innerHTML = `total: ${round}`
 }
 
 function case_lose() {
-    return h1.innerHTML = 'perdeu!', round += 1, 
-    area_round.innerHTML = `total: ${round}`, 
-    defeat += 1, area_defeat.innerHTML = `derrotas: ${defeat}`
+    h1.innerHTML = 'perdeu!'
+    round += 1, 
+    area_round.innerHTML = `total: ${round}` 
+    defeat += 1
+    area_defeat.innerHTML = `derrotas: ${defeat}`
 }
 
 function win_case() {
-    return h1.innerHTML = 'ganhou!', round += 1, 
-    area_round.innerHTML = `total: ${round}`, 
-    victory += 1, area_victory.innerHTML = `vitórias: ${victory}`
+    h1.innerHTML = 'ganhou!'
+    round += 1, 
+    area_round.innerHTML = `total: ${round}`
+    victory += 1
+    area_victory.innerHTML = `vitórias: ${victory}`
 }
 
 let img = document.querySelector('img#computer')
@@ -31,14 +36,17 @@ const store_computer = ['pedra', 'papel', 'tesoura']
 function stone_possibilities(random) {
     if (store_computer[random] == 'pedra') {
 
-        return img.setAttribute('src','../imgs/pedra.png'), tie_case()
+        img.setAttribute('src','../imgs/pedra.png') 
+        tie_case()
 
     } else if (store_computer[random] == 'papel') {
         
-        return img.setAttribute('src','../imgs/papel.png'), case_lose()
+        img.setAttribute('src','../imgs/papel.png') 
+        case_lose()
 
     } else if (store_computer[random] == 'tesoura') {
-        return img.setAttribute('src','../imgs/tesoura.png'), win_case()
+        img.setAttribute('src','../imgs/tesoura.png')
+        win_case()
 
     }
 }
@@ -46,15 +54,18 @@ function stone_possibilities(random) {
 function paper_possibilities(random) {
     if (store_computer[random] == 'papel') {
 
-        return img.setAttribute('src','../imgs/papel.png'), tie_case()
+        img.setAttribute('src','../imgs/papel.png')
+        tie_case()
 
     } else if (store_computer[random] == 'tesoura') {
 
-        return img.setAttribute('src','../imgs/tesoura.png'), case_lose()
+        img.setAttribute('src','../imgs/tesoura.png') 
+        case_lose()
 
     } else if (store_computer[random] == 'pedra') {
 
-        return img.setAttribute('src','../imgs/pedra.png'), win_case()
+        img.setAttribute('src','../imgs/pedra.png')
+         win_case()
 
     }
 }
@@ -62,15 +73,18 @@ function paper_possibilities(random) {
 function scissors_possibilities(random) {
     if (store_computer[random] == 'tesoura') {
 
-        return img.setAttribute('src','../imgs/tesoura.png'), tie_case()
+        img.setAttribute('src','../imgs/tesoura.png') 
+        tie_case()
 
     } else if (store_computer[random] == 'pedra') {
 
-        return img.setAttribute('src','../imgs/pedra.png'), case_lose()
+        img.setAttribute('src','../imgs/pedra.png')
+        case_lose()
 
     } else if (store_computer[random] == 'papel') {
 
-        return img.setAttribute('src','../imgs/papel.png'), win_case()
+        img.setAttribute('src','../imgs/papel.png')
+        win_case()
 
     }
 }
