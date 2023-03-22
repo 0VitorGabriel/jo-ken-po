@@ -1,33 +1,24 @@
-let h1 = document.querySelector('h1#result')
+const play = document.querySelector('input#submit')
 
-let area_round = document.querySelector('p#total_round')
-let area_defeat = document.querySelector('p#defeats')
-let area_victory = document.querySelector('p#victory')
+play.addEventListener('click', function randomize_and_start() {
 
-let round = 0
-let defeat = 0
-let victory = 0
+    let random_store_computer = Math.floor(
+        Math.random() * store_computer.length
+    )
+    
+    check_pressed_button(random_store_computer)
+}) 
 
-function tie_case() {
-    h1.innerHTML = 'empate' 
-    round += 1
-    area_round.innerHTML = `total: ${round}`
-}
+const user = document.querySelectorAll('input')
 
-function case_lose() {
-    h1.innerHTML = 'perdeu!'
-    round += 1, 
-    area_round.innerHTML = `total: ${round}` 
-    defeat += 1
-    area_defeat.innerHTML = `derrotas: ${defeat}`
-}
-
-function win_case() {
-    h1.innerHTML = 'ganhou!'
-    round += 1, 
-    area_round.innerHTML = `total: ${round}`
-    victory += 1
-    area_victory.innerHTML = `vitórias: ${victory}`
+function check_pressed_button(random) {
+    if (user[0].checked) {
+        stone_possibilities(random)
+    } else if (user[1].checked) {
+        paper_possibilities(random)
+    } else if (user[2].checked) {
+        scissors_possibilities(random)
+    }
 }
 
 let img = document.querySelector('img#computer')
@@ -89,28 +80,37 @@ function scissors_possibilities(random) {
     }
 }
 
-const user = document.querySelectorAll('input')
+let title_situation = document.querySelector('h1#result')
 
-function check_pressed_button(random) {
-    if (user[0].checked) {
-        stone_possibilities(random)
-    } else if (user[1].checked) {
-        paper_possibilities(random)
-    } else if (user[2].checked) {
-        scissors_possibilities(random)
-    }
+let area_round = document.querySelector('p#total_round')
+let area_defeat = document.querySelector('p#defeats')
+let area_victory = document.querySelector('p#victory')
+
+let round = 0
+let defeat = 0
+let victory = 0
+
+function tie_case() {
+    title_situation.innerHTML = 'empate' 
+    round += 1
+    area_round.innerHTML = `total: ${round}`
 }
 
-const play = document.querySelector('input#submit')
+function case_lose() {
+    title_situation.innerHTML = 'perdeu!'
+    round += 1, 
+    area_round.innerHTML = `total: ${round}` 
+    defeat += 1
+    area_defeat.innerHTML = `derrotas: ${defeat}`
+}
 
-play.addEventListener('click', function randomize_and_start() {
-
-    let random_store_computer = Math.floor(
-        Math.random() * store_computer.length
-    )
-    
-    check_pressed_button(random_store_computer)
-}) 
+function win_case() {
+    title_situation.innerHTML = 'ganhou!'
+    round += 1, 
+    area_round.innerHTML = `total: ${round}`
+    victory += 1
+    area_victory.innerHTML = `vitórias: ${victory}`
+}
 
 const restart = document.querySelector('input#restart')
 
@@ -127,5 +127,5 @@ restart.addEventListener('click', function restart() {
     area_victory.innerHTML = 'vitórias: '
     victory = 0
 
-    h1.innerHTML = ''
+    title_situation.innerHTML = ''
 })
