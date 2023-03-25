@@ -27,16 +27,16 @@ const store_computer = ['pedra', 'papel', 'tesoura']
 function stone_possibilities(random) {
     if (store_computer[random] == 'pedra') {
 
-        img.setAttribute('src','../imgs/pedra.png') 
+        img.src = '../imgs/pedra.png'
         tie_case()
 
     } else if (store_computer[random] == 'papel') {
         
-        img.setAttribute('src','../imgs/papel.png') 
+        img.src = '../imgs/papel.png'
         case_lose()
 
     } else if (store_computer[random] == 'tesoura') {
-        img.setAttribute('src','../imgs/tesoura.png')
+        img.src = '../imgs/tesoura.png'
         win_case()
 
     }
@@ -45,18 +45,18 @@ function stone_possibilities(random) {
 function paper_possibilities(random) {
     if (store_computer[random] == 'papel') {
 
-        img.setAttribute('src','../imgs/papel.png')
+        img.src = '../imgs/papel.png'
         tie_case()
 
     } else if (store_computer[random] == 'tesoura') {
 
-        img.setAttribute('src','../imgs/tesoura.png') 
+        img.src = '../imgs/tesoura.png'
         case_lose()
 
     } else if (store_computer[random] == 'pedra') {
 
-        img.setAttribute('src','../imgs/pedra.png')
-         win_case()
+        img.src = '../imgs/pedra.png'
+        win_case()
 
     }
 }
@@ -64,17 +64,17 @@ function paper_possibilities(random) {
 function scissors_possibilities(random) {
     if (store_computer[random] == 'tesoura') {
 
-        img.setAttribute('src','../imgs/tesoura.png') 
+        img.src = '../imgs/tesoura.png'
         tie_case()
 
     } else if (store_computer[random] == 'pedra') {
 
-        img.setAttribute('src','../imgs/pedra.png')
+        img.src = '../imgs/pedra.png'
         case_lose()
 
     } else if (store_computer[random] == 'papel') {
 
-        img.setAttribute('src','../imgs/papel.png')
+        img.src = '../imgs/papel.png'
         win_case()
 
     }
@@ -116,7 +116,7 @@ const restart = document.querySelector('input#restart')
 
 restart.addEventListener('click', function restart() {
 
-    img.setAttribute('src','../imgs/computador.jpg')
+    img.src = '../imgs/computador.jpg'
 
     area_round.innerHTML = 'total: '
     round = 0
