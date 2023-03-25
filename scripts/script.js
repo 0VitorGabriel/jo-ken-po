@@ -21,7 +21,7 @@ function check_pressed_button(random) {
     }
 }
 
-let img = document.querySelector('img#computer')
+const img = document.querySelector('img#computer')
 const store_computer = ['pedra', 'papel', 'tesoura']
 
 function stone_possibilities(random) {
@@ -80,7 +80,7 @@ function scissors_possibilities(random) {
     }
 }
 
-let title_situation = document.querySelector('h1#result')
+const title_situation = document.querySelector('h1#result')
 
 let area_round = document.querySelector('p#total_round')
 let area_defeat = document.querySelector('p#defeats')
