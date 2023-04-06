@@ -1,4 +1,5 @@
 const play = document.querySelector('input#submit')
+const store_computer = ['pedra', 'papel', 'tesoura']
 
 play.addEventListener('click', function randomize_and_start() {
 
@@ -22,7 +23,6 @@ function check_pressed_button(random) {
 }
 
 const img = document.querySelector('img#computer')
-const store_computer = ['pedra', 'papel', 'tesoura']
 
 function stone_possibilities(random) {
     if (store_computer[random] == 'pedra') {
