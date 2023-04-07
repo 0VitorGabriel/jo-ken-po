@@ -115,17 +115,5 @@ function win_case() {
 const restart = document.querySelector('input#restart')
 
 restart.addEventListener('click', function restart() {
-
-    img.src = '../imgs/computador.jpg'
-
-    area_round.innerHTML = 'total: '
-    round = 0
-    
-    area_defeat.innerHTML = 'derrotas: '
-    defeat = 0
-
-    area_victory.innerHTML = 'vitórias: '
-    victory = 0
-
-    title_situation.innerHTML = ''
+    location.reload()
 })
